@@ -17,14 +17,19 @@ public class mainClass {
 	}
 	
 	static void searchForTweets(Twitter twitter) throws TwitterException
-	{
+	{	    
+	    Query query = new Query("#batsignal");
 	    
-	    Query query = new Query("source:twitter4j yusukey");
-	    
-	    QueryResult result = twitter.search(query);
-	    
+		QueryResult result = twitter.search(query);
+		
+		String strUsername = null;
 	    for (Status status : result.getTweets()) {
-	        System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
+	    	
+	    	strUsername = status.getUser().getScreenName();
+	    	
+	        System.out.println(strUsername + " says: ");
+	        System.out.println("\"" + status.getText() + "\"");
+	        System.out.println();
 	    }
 	}
 }
