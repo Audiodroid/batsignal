@@ -3,6 +3,9 @@ batsignal
 
 a project to send signals to an arduino/rasberry pi when twitter hashtags have been detected 
 
+Prelimiaries
+- the code is using a library called twitter4j: http://twitter4j.org/en/index.html
+
 HOW-TO set up the java project
 - open eclipse and create a new, empty project with a name you like ;-)
 - create a file called "twitter4j.properties" in the eclipse project directory, hit F5 in the "Project Explorer" and make sure you see the file listed
