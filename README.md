@@ -25,3 +25,4 @@ oauth.accessTokenSecret=01234567890abcdefghijklmnopqrstuvwxyz012345
 - go to the TAB "Source" click on [Link Source...] => [Browse...] and select the "java_code/source"-folder from this git-project
 - right-click the project name again or got to the menu bar "Run", choose "Run as...", select "Java Application", choose "mainClass - batsignal", if needed and have a look at the "Console"-TAB of eplise.
 - done.
+- if you want the ouput of your code alone, set "debug=false" in the "twitter4j.properties"-file
