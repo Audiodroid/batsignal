@@ -8,12 +8,19 @@ public class mainClass {
 	
 	public static void main(String args[]) throws TwitterException, IOException, InterruptedException
 	{		
-		App app = new App();		
-		UI ui = new UI(app);
+		TweetChecker tweetChecker = new TweetChecker();
+		App app = new App(tweetChecker);
 		
+		SingleByteCommunication singleByteCom = new SingleByteCommunication();		
+		singleByteCom.init();				
+		app.addObserver(singleByteCom);
+		
+		UI ui = new UI(app);		
 		app.addObserver(ui);	
-
+		
 		app.start();		
-		ui.start();		
+		ui.start();	
+		
+		singleByteCom.close();
 	}			
 }
