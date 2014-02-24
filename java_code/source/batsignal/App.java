@@ -23,7 +23,7 @@ public class App extends Observable implements Runnable {
 	private long intervalTime_ = 0;
 	
 	private Thread 			thread_ 	 = null;		
-	private TweetChecker 	tweetChecker_ = new TweetChecker();
+	private TweetChecker 	tweetChecker_ = null;
 	
 	public App(TweetChecker tweetChecker) {
 		tweetChecker_ = tweetChecker;

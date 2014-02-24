@@ -38,7 +38,7 @@ public class App_TEST {
 		Thread.sleep(2);
 		app_.stop();
 		
-		verify (tweetCheckerMOCK_, atLeast(2)).check();
+		verify (tweetCheckerMOCK_, atLeast(2)).check(); //JUnit4
 				
 
 //		when(instrKeySnd1_.isPlaying()).thenReturn(false);
